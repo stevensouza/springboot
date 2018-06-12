@@ -20,3 +20,15 @@ playground/src/main/resources/data/out/*
 # Maven
 log/
 target/
+
+\.classpath
+
+\.factorypath
+
+\.project
+
+\.springBeans
+
+mvnw
+
+mvnw\.cmd
