@@ -20,8 +20,14 @@ public class HelloController {
 		@Autowired
 		private AppProps props;
 		
+		@Autowired
+		private PersonRepository personTableRepository;
+		
 	    @GetMapping()
-	    public List<Person> index() {
+	    public Iterable<Person> index() {
+	    	Person justSaved=personTableRepository.save(new Person("Steven", "Souza"));
+	    	System.out.println("***********"+justSaved);
+
 	    	List<Person> people=new ArrayList<Person>();
 	    	people.add(new Person("Joe", "Souza"));
 	    	people.add(new Person("Winnie", "Souza"));
