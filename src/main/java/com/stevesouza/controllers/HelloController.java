@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.stevesouza.AppProps;
 import com.stevesouza.db.Person;
+import com.stevesouza.db.PersonRepository;
 
+// try 1) different path commands 2) DELETE, PUT, POST
 
 @RestController
 @RequestMapping("/restapi")
@@ -35,7 +37,8 @@ public class HelloController {
 	    	people.add(new Person("Jean", "Souza"));
 	    	people.add(new Person("Joel", "Souza"));
 	    	people.add(new Person("Steven", "Souza"));
-	        return people;
+	    
+	        return personTableRepository.findAll();
 	    }
 	    
 	    @GetMapping("/person/{personId}")
