@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 // get methods and the data was returned. Originally id didn't have a get method and
 // the other fields were returned, but id was not.
 
+// note with spring data jpa a connection is automatically established with the 
+// embedded h2 database. 
 // try different column annotations
 
 @Entity
