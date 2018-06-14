@@ -32,6 +32,14 @@ public class Person implements Serializable {
 	
 	// note getters/setters aren't required for jpa
 	private String firstName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 	private String lastName;
 	
 	// a default constructor is required by jpa (i believe)
