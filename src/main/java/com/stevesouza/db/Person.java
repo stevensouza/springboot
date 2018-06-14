@@ -1,5 +1,7 @@
 package com.stevesouza.db;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,10 +16,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 // embedded h2 database. 
 // try different column annotations
 
+
+
 @Entity
 @XmlRootElement
-public class Person {
+// note serializable is not required to be an Entity
+public class Person implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 
 	// primary key
 	@Id

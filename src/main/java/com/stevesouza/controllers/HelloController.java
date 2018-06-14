@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,21 +26,27 @@ public class HelloController {
 		@Autowired
 		private PersonRepository personTableRepository;
 		
-	    @GetMapping()
-	    public Iterable<Person> index() {
-	    	Person justSaved=personTableRepository.save(new Person("Steven", "Souza"));
-	    	System.out.println("***********"+justSaved);
 
-	    	List<Person> people=new ArrayList<Person>();
-	    	people.add(new Person("Joe", "Souza"));
-	    	people.add(new Person("Winnie", "Souza"));
-	    	people.add(new Person("Sandra", "Souza"));
-	    	people.add(new Person("Jean", "Souza"));
-	    	people.add(new Person("Joel", "Souza"));
-	    	people.add(new Person("Steven", "Souza"));
-	    
+	    // Get a Single Note
+
+	    // Update a Note
+
+	    // Delete a Note
+		
+		// return all people
+	    @GetMapping("/people")
+	    public Iterable<Person> index() {
 	        return personTableRepository.findAll();
 	    }
+	    
+	    // Create a person
+	    @PostMapping("/person")
+	    public Person createPerson(Person person) {
+	        return personTableRepository.save(person);
+	    }
+
+	    
+	    
 	    
 	    @GetMapping("/person/{personId}")
 	   // @RequestMapping(value = "/person", method = RequestMethod.GET, produces = {"application/json"})
