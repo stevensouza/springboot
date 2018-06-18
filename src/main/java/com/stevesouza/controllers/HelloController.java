@@ -19,8 +19,6 @@ import com.stevesouza.AppProps;
 import com.stevesouza.db.Person;
 import com.stevesouza.db.PersonRepository;
 
-// try 1) different path commands 2) DELETE, PUT, POST
-
 @RestController
 @RequestMapping("/restapi")
 public class HelloController {

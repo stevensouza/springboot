@@ -14,7 +14,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 // note with spring data jpa a connection is automatically established with the 
 // embedded h2 database. 
-// try different column annotations
 
 
 
