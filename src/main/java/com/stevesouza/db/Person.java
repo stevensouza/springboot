@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 // @XmlRootElement not needed if jackson is used for returning xml
-// note json generation won't be default return values for private variables.  I added
-// get methods and the data was returned. Originally id didn't have a get method and
+// note json generation won't be default return values for private variables.  I had to add 
+// get methods to get the data was returned. Originally id didn't have a get method and
 // the other fields were returned, but id was not.
 
 // note with spring data jpa a connection is automatically established with the 
