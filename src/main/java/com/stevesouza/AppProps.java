@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /** 
- * Note by using a file is created that creates a json file that documents all
+ * Note by using this approach a file is created that creates a json file that documents all
  * properties in the app.
  * 
  * mvn artifact to do this: <artifactId>spring-boot-configuration-processor</artifactId>
