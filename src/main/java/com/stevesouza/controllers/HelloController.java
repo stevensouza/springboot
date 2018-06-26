@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ import com.stevesouza.db.Person;
 import com.stevesouza.db.PersonRepository;
 
 @RestController
-@RequestMapping("/restapi")
+@RequestMapping(value="/restapi")
 public class HelloController {
 
     	private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -33,7 +34,7 @@ public class HelloController {
 
 		
 		// return all people
-	    @GetMapping("/people")
+	    @GetMapping(value="/people", produces= {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 	    public Iterable<Person> getPeople() {
 	    	logger.info("just demonstrating property loaded from application.properties. myprops.name="+props.getName());;
 	    	return personTableRepository.findAll();
